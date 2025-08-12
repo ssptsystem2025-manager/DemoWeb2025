@@ -171,7 +171,7 @@
     </a>
   <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-controls="mainNav" aria-expanded="false">☰</button>
     <!-- ナビゲーション（主メニュー）領域。PCでは横並び、スマホではハンバーガーメニューで表示 -->
-    <nav aria-label="主メニュー">
+  <nav id="mainNav" aria-label="主メニュー">
       <!-- 各セクションへのリンク。順番や表示内容は必要に応じて編集可能 -->
       <a href="#about">後援会概要</a>
       <a href="#news">活動報告</a>
@@ -492,6 +492,32 @@
     form.reset();
     return false;
   }
+  // ハンバーガーメニュー開閉制御
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  // 初期状態: スマホなら閉じる
+  function setInitialNavState() {
+    if(window.innerWidth <= 700) {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', false);
+    } else {
+      mainNav.classList.add('open');
+      menuToggle.setAttribute('aria-expanded', true);
+    }
+  }
+  setInitialNavState();
+  window.addEventListener('resize', setInitialNavState);
+  menuToggle.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', open);
+  });
+  // メニューリンククリックで自動的に閉じる（スマホのみ）
+  mainNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      if(window.innerWidth <= 700) mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', false);
+    });
+  });
 </script>
 
 <!-- 構造化データ -->

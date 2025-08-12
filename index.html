@@ -44,6 +44,7 @@
           gap: 0;
           box-shadow: 0 8px 24px rgba(0,0,0,.08);
           border-bottom: 1px solid var(--line);
+          padding-left: 48px; /* ハンバーガーアイコン分の左余白を確保 */
         }
         nav.open {
           display: flex;
@@ -87,7 +88,7 @@
     .brand svg{width:44px;height:44px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.08));}
     .brand h1{font-size:20px;line-height:1.2;margin:0;}
     nav{display:flex;flex-wrap:wrap;gap:14px;}
-    nav a{padding:10px 12px;border-radius:10px;text-decoration:none;color:inherit;border:1px solid transparent;}
+  nav a{padding:2px 12px;border-radius:10px;text-decoration:none;color:inherit;border:1px solid transparent;}
     nav a:hover{background:var(--card);border-color:var(--line);}
     nav a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{outline:3px solid var(--accent-2);outline-offset:3px;border-radius:8px;}
     .ctrls{display:flex;align-items:center;gap:6px;}
@@ -166,10 +167,12 @@
           </g>
         </g>
       </svg>
-      <h1>サンプル太郎 後援会（サンプル）</h1>
+      <h1>サンプル太郎 後援会</h1>
     </a>
   <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-controls="mainNav" aria-expanded="false">☰</button>
+    <!-- ナビゲーション（主メニュー）領域。PCでは横並び、スマホではハンバーガーメニューで表示 -->
     <nav aria-label="主メニュー">
+      <!-- 各セクションへのリンク。順番や表示内容は必要に応じて編集可能 -->
       <a href="#about">後援会概要</a>
       <a href="#news">活動報告</a>
       <a href="#events">イベント</a>

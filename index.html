@@ -77,7 +77,7 @@
         }
       }
     .contrast{ --bg:#fff; --card:#fff; --ink:#000; --muted:#111; --accent:#000; --line:#000; --shadow:none; }
-    .text-lg{ --fs-1: 32px; --fs-2: 24px; --fs-3: 20px; }
+  .text-lg{ --fs-1: 34px; --fs-2: 26px; --fs-3: 22px; }
 
     html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans JP","Segoe UI",sans-serif;line-height:1.7;}
     a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
@@ -182,7 +182,7 @@
   <a href="#contact">お問い合わせ</a>
     </nav>
     <div class="ctrls">
-      <button id="fontBtn" aria-label="文字サイズ切替">Aあ</button>
+  <button id="fontBtn" aria-label="文字サイズ切替"><span style="font-size:32px;vertical-align:-6px;">あ</span><span style="font-size:22px;vertical-align:-2px;margin-left:2px;">あ</span></button>
       <button id="contrastBtn" aria-label="高コントラスト切替">◎</button>
     </div>
   </div>
@@ -316,7 +316,6 @@
           <label>ふりがな<input name="kana"></label>
           <label class="req">メールアドレス<input required type="email" name="email" autocomplete="email"></label>
           <label>ご住所<textarea name="address" rows="2" autocomplete="street-address"></textarea></label>
-          <label>会員種別<select name="type"><option>一般会員</option><option>賛助会員</option></select></label>
           <label>ご意見・ご関心事項<textarea name="msg" rows="3" placeholder="子育て支援、産業、環境、観光など"></textarea></label>
           <button class="btn" type="submit">入会を申し込む（デモ送信）</button>
           <div class="help">※送信先・個人情報の取扱いは必ずプライバシーポリシーに明記してください。</div>

@@ -322,15 +322,43 @@
       </div>
       <div class="card">
         <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm-9 9a9 9 0 1 1 18 0z" fill="currentColor"/></svg>入会申込フォーム</h3>
-        <form aria-label="入会申込フォーム" onsubmit="return submitForm(event,'join')">
-          <label class="req">お名前<input required name="name" autocomplete="name"></label>
-          <label>ふりがな<input name="kana"></label>
-          <label class="req">メールアドレス<input required type="email" name="email" autocomplete="email"></label>
-          <label>ご住所<textarea name="address" rows="2" autocomplete="street-address"></textarea></label>
-          <label>ご意見・ご関心事項<textarea name="msg" rows="3" placeholder="子育て支援、産業、環境、観光など"></textarea></label>
-          <button class="btn" type="submit">入会を申し込む（デモ送信）</button>
-          <div class="help">※送信先・個人情報の取扱いは必ずプライバシーポリシーに明記してください。</div>
-        </form>
+        <!-- 入会申込フォーム（地区名追加） -->
+<form aria-label="入会申込フォーム" onsubmit="return submitForm(event,'join')">
+  <label class="req">お名前<input required name="name" autocomplete="name"></label>
+  <label>ふりがな<input name="kana"></label>
+  <label class="req">メールアドレス<input required type="email" name="email" autocomplete="email"></label>
+  <label class="req">地区名
+    <select name="area" required>
+      <option value="">選択してください</option>
+      <option>あいうえお順</option>
+      <option>鮎沢区</option>
+      <option>新倉区</option>
+      <option>新屋敷区</option>
+      <option>今井区</option>
+      <option>岡谷区</option>
+      <option>小井川区</option>
+      <option>小口区</option>
+      <option>小坂区</option>
+      <option>小尾口区</option>
+      <option>駒沢区</option>
+      <option>三沢区</option>
+      <option>下浜区</option>
+      <option>中屋区</option>
+      <option>中村区</option>
+      <option>西堀区</option>
+      <option>花岡区</option>
+      <option>橋原区</option>
+      <option>樋沢区</option>
+      <option>東堀区</option>
+      <option>間下区</option>
+      <option>横川区</option>
+    </select>
+  </label>
+  <label>ご住所<textarea name="address" rows="2" autocomplete="street-address"></textarea></label>
+  <label>ご意見・ご関心事項<textarea name="msg" rows="3" placeholder="子育て支援、産業、環境、観光など"></textarea></label>
+  <button class="btn" type="submit">入会を申し込む（デモ送信）</button>
+  <div class="help">※送信先・個人情報の取扱いは必ずプライバシーポリシーに明記してください。</div>
+</form>
       </div>
     </div>
   </section>

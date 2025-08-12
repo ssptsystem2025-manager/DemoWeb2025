@@ -54,8 +54,18 @@
         nav.open {
           display: flex;
         }
+        .menu-area {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-left: auto;
+        }
         .menu-toggle {
+          order: 2;
           display: block;
+        }
+        #fontBtn {
+          order: 1;
         }
         .topbar {
           flex-wrap: wrap;
@@ -174,21 +184,20 @@
       </svg>
       <h1>平野太郎 後援会</h1>
     </a>
-  <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-controls="mainNav" aria-expanded="false">☰</button>
-    <!-- ナビゲーション（主メニュー）領域。PCでは横並び、スマホではハンバーガーメニューで表示 -->
-  <nav id="mainNav" aria-label="主メニュー">
-      <!-- 各セクションへのリンク。順番や表示内容は必要に応じて編集可能 -->
-  <a href="#about">後援会概要</a>
-  <a href="#news">活動報告</a>
-  <a href="#events">イベント</a>
-  <a href="#join">入会案内</a>
-  <a href="#support">支援方法</a>
-  <a href="#gallery">ギャラリー</a>
-  <a href="#contact">お問い合わせ</a>
-    </nav>
-    <div class="ctrls">
-  <button id="fontBtn" aria-label="文字サイズ切替"><span style="font-size:20px;vertical-align:-6px;">あ</span><span style="font-size:16px;vertical-align:-2px;margin-left:2px;">あ</span></button>
-    </div>
+      <div class="ctrls menu-area">
+        <button id="fontBtn" aria-label="文字サイズ切替"><span style="font-size:20px;vertical-align:-6px;">あ</span><span style="font-size:16px;vertical-align:-2px;margin-left:2px;">あ</span></button>
+        <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-controls="mainNav" aria-expanded="false">☰</button>
+      </div>
+      <nav id="mainNav" aria-label="主メニュー">
+        <!-- 各セクションへのリンク。順番や表示内容は必要に応じて編集可能 -->
+        <a href="#about">後援会概要</a>
+        <a href="#news">活動報告</a>
+        <a href="#events">イベント</a>
+        <a href="#join">入会案内</a>
+        <a href="#support">支援方法</a>
+        <a href="#gallery">ギャラリー</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
   </div>
 </header>
 
@@ -222,7 +231,6 @@
       </div>
       <div class="card">
         <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l4 2" stroke="currentColor" stroke-width="2" fill="none"/></svg>プロフィール（抜粋）</h3>
-        <p class="muted">※デモのため実績・数値は掲載していません。</p>
         <ul>
           <li>出身：岡谷市</li>
           <li>重点方針：×××</li>
@@ -270,12 +278,12 @@
       <p class="help">※デモ表示です。日付・場所はマスキングしています。</p>
       <div class="grid cols-2">
         <div class="card event">
-          <div><span class="tag">サンプル</span><strong>市政報告と意見交換会（サンプル）</strong></div>
+          <div><span class="tag">募集中</span><strong>市政報告と意見交換会（サンプル）</strong></div>
           <div class="meta">
             <div>日時：20××年×月×日（×）××:××–××:××</div>
             <div>会場：岡谷市内 ××会場</div>
           </div>
-          <p class="muted">事前申込制（定員××名）。手話通訳あり。託児は先着要予約。（いずれもサンプル）</p>
+          <p class="muted">事前申込制（定員××名）。</p>
           <details>
             <summary>詳細を見る</summary>
             <ul>
@@ -307,10 +315,6 @@
       <div class="card">
         <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8z" fill="currentColor"/></svg>会員募集</h3>
         <p>後援会の趣旨にご賛同いただける方を広く募集しております。<strong>会費はありません。</strong>ご支援は任意です。</p>
-        <ul>
-          <li>一般会員：会費なし</li>
-          <li>賛助会員：会費なし</li>
-        </ul>
         <p class="help">※会費は徴収していません。ご支援は任意です。政治資金規正法の範囲でご対応ください。</p>
       </div>
       <div class="card">
@@ -434,15 +438,13 @@
   <section id="legal">
     <div class="wrap">
       <div class="card legal">
-        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12l2 4v14H4V6z" fill="currentColor"/></svg>法令・ガイドラインへの対応（要確認）</h3>
+        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12l2 4v14H4V6z" fill="currentColor"/></svg>法令・ガイドラインへの対応</h3>
         <ul>
-          <li>政治資金規正法に基づく表記（代表者名、会計責任者名、所在地 等）</li>
-          <li>寄付の受領範囲・上限、外国人・団体・匿名寄付の取扱い</li>
-          <li>公職選挙法に関する注意（選挙期間中の掲載表現 等）</li>
-          <li>プライバシーポリシー・個人情報の安全管理</li>
-          <li>著作権・肖像権（写真掲載の同意取得）</li>
+          <li>このページはデモ用です。実際の法令・ガイドライン対応は運用時に必ずご確認ください。</li>
+          <li>実運用では、政治資金規正法・公職選挙法・プライバシーポリシー・著作権等の記載が必要です。</li>
+          <li>掲載内容・個人情報の取扱い・寄付の範囲などは、必ず事務局・専門家にご相談ください。</li>
         </ul>
-        <p>※当ページはデモです。実績・個別イベントは掲載していません。</p>
+        <p>※デモ表示のため、実績・個別イベント・法令対応の詳細は記載していません。</p>
       </div>
     </div>
   </section>

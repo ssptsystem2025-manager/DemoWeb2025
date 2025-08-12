@@ -82,7 +82,7 @@
         }
       }
     .contrast{ --bg:#fff; --card:#fff; --ink:#000; --muted:#111; --accent:#000; --line:#000; --shadow:none; }
-  .text-lg{ --fs-1: 34px; --fs-2: 26px; --fs-3: 22px; }
+  .text-lg{ font-size: calc(1rem + 4px) !important; --fs-1: 34px; --fs-2: 26px; --fs-3: 22px; }
 
     html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans JP","Segoe UI",sans-serif;line-height:1.7;}
     a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
@@ -187,8 +187,7 @@
   <a href="#contact">お問い合わせ</a>
     </nav>
     <div class="ctrls">
-  <button id="fontBtn" aria-label="文字サイズ切替"><span style="font-size:32px;vertical-align:-6px;">あ</span><span style="font-size:22px;vertical-align:-2px;margin-left:2px;">あ</span></button>
-      <button id="contrastBtn" aria-label="高コントラスト切替">◎</button>
+  <button id="fontBtn" aria-label="文字サイズ切替"><span style="font-size:20px;vertical-align:-6px;">あ</span><span style="font-size:16px;vertical-align:-2px;margin-left:2px;">あ</span></button>
     </div>
   </div>
 </header>

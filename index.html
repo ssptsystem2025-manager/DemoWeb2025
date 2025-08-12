@@ -112,8 +112,8 @@
     .hero{
       color:#fff;
       background:
-        radial-gradient(1200px 300px at 50% -100px, rgba(4,107,187,.55), transparent),
-        linear-gradient(180deg, #e3f0f7 0%, #b2d5e6 60%, #7bb6d6 100%);
+        radial-gradient(1200px 300px at 50% -100px, rgba(143,211,181,.45), transparent),
+        linear-gradient(180deg, #e8f6ef 0%, #b8e3c8 60%, #8fd3b5 100%);
       position:relative; overflow:hidden;
     }
     .hero::after{
@@ -152,6 +152,21 @@
     .to-top{position:fixed;right:16px;bottom:16px;z-index:8;}
 
     .ico{width:22px;height:22px;vertical-align:-4px;margin-right:6px}
+
+    @media (max-width:700px) {
+  .wrap {
+    padding: 0 8px !important;
+    max-width: 100%;
+  }
+  .grid,
+  .cols-2,
+  .cols-3 {
+    display: block !important;
+  }
+  .card {
+    margin-bottom: 18px;
+  }
+}
   </style>
 </head>
 <body>

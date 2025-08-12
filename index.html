@@ -173,13 +173,13 @@
     <!-- ナビゲーション（主メニュー）領域。PCでは横並び、スマホではハンバーガーメニューで表示 -->
   <nav id="mainNav" aria-label="主メニュー">
       <!-- 各セクションへのリンク。順番や表示内容は必要に応じて編集可能 -->
-      <a href="#about">後援会概要</a>
-      <a href="#news">活動報告</a>
-      <a href="#events">イベント</a>
-      <a href="#join">入会案内</a>
-      <a href="#support">支援方法</a>
-      <a href="#gallery">ギャラリー</a>
-      <a href="#contact">お問い合わせ</a>
+  <a href="#about">後援会概要</a>
+  <a href="#news">活動報告</a>
+  <a href="#events">イベント</a>
+  <a href="#join">入会案内</a>
+  <a href="#support">支援方法</a>
+  <a href="#gallery">ギャラリー</a>
+  <a href="#contact">お問い合わせ</a>
     </nav>
     <div class="ctrls">
       <button id="fontBtn" aria-label="文字サイズ切替">Aあ</button>
@@ -505,7 +505,8 @@
       menuToggle.setAttribute('aria-expanded', true);
     }
   }
-  setInitialNavState();
+  // 強制的に非表示（openクラスを外す）
+  mainNav.classList.remove('open');
   window.addEventListener('resize', setInitialNavState);
   menuToggle.addEventListener('click', () => {
     const open = mainNav.classList.toggle('open');

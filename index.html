@@ -20,6 +20,61 @@
       --fs-1:clamp(22px,2.8vw,28px); --fs-2:clamp(18px,2.2vw,22px); --fs-3:clamp(15px,1.8vw,18px);
       --bg:linear-gradient(180deg,var(--washi),#fff);
     }
+      /* スマホ用ハンバーガーメニュー */
+      .menu-toggle {
+        display: none;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-size: 22px;
+        cursor: pointer;
+        z-index: 20;
+      }
+      @media (max-width:700px) {
+        nav {
+          display: none;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100vw;
+          background: var(--card);
+          flex-direction: column;
+          gap: 0;
+          box-shadow: 0 8px 24px rgba(0,0,0,.08);
+          border-bottom: 1px solid var(--line);
+        }
+        nav.open {
+          display: flex;
+        }
+        .menu-toggle {
+          display: block;
+        }
+        .topbar {
+          flex-wrap: wrap;
+        }
+        .brand h1 {
+          font-size: 16px;
+        }
+        .wrap {
+          padding: 0 8px;
+        }
+        .btn, .btn.alt {
+          font-size: 16px;
+          padding: 14px 18px;
+        }
+        .to-top {
+          right: 8px;
+          bottom: 8px;
+          font-size: 18px;
+          padding: 10px 14px;
+        }
+        input, textarea, select {
+          font-size: 16px;
+          padding: 16px;
+        }
+      }
     .contrast{ --bg:#fff; --card:#fff; --ink:#000; --muted:#111; --accent:#000; --line:#000; --shadow:none; }
     .text-lg{ --fs-1: 32px; --fs-2: 24px; --fs-3: 20px; }
 
@@ -113,6 +168,7 @@
       </svg>
       <h1>サンプル太郎 後援会（サンプル）</h1>
     </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-controls="mainNav" aria-expanded="false">☰</button>
     <nav aria-label="主メニュー">
       <a href="#about">後援会概要</a>
       <a href="#news">活動報告</a>

@@ -241,7 +241,7 @@
   <section id="about">
     <div class="wrap grid cols-2">
       <div class="card">
-        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 13c6-6 12-6 18 0v6H3z"/></svg>後援会の目的</h3>
+        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13c6-6 12-6 18 0v6H3z"/></svg>後援会の目的</h3>
         <p>匿名太郎の政策と市政運営を支え、地域の皆さまとともに課題解決・魅力発信を進めます。会員の皆さまには、活動報告のご送付や行事のご案内を差し上げます。</p>
         <!-- <ul>
           <li>諏訪湖畔の清掃・環境美化の支援</li>
@@ -331,48 +331,21 @@
   <section id="join">
     <div class="wrap grid cols-2">
       <div class="card">
-        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8z" fill="currentColor"/></svg>会員募集</h3>
-        <p>後援会の趣旨にご賛同いただける方を広く募集しております。<strong>会費はありません。</strong>ご支援は任意です。</p>
-        <p class="help">※会費は徴収していません。ご支援は任意です。政治資金規正法の範囲でご対応ください。</p>
-      </div>
-      <div class="card">
-        <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm-9 9a9 9 0 1 1 18 0z" fill="currentColor"/></svg>入会申込フォーム</h3>
-        <!-- 入会申込フォーム（地区名追加） -->
-<form aria-label="入会申込フォーム" onsubmit="return submitForm(event,'join')">
-  <label class="req">お名前<input required name="name" autocomplete="name"></label>
-  <label>ふりがな<input name="kana"></label>
-  <label class="req">メールアドレス<input required type="email" name="email" autocomplete="email"></label>
-  <label class="req">地区名
-    <select name="area" required>
-      <option value="">選択してください</option>
-      <option>鮎沢区</option>
-      <option>新倉区</option>
-      <option>新屋敷区</option>
-      <option>今井区</option>
-      <option>平野区</option>
-      <option>小井川区</option>
-      <option>小口区</option>
-      <option>小坂区</option>
-      <option>小尾口区</option>
-      <option>駒沢区</option>
-      <option>三沢区</option>
-      <option>下浜区</option>
-      <option>中屋区</option>
-      <option>中村区</option>
-      <option>西堀区</option>
-      <option>花岡区</option>
-      <option>橋原区</option>
-      <option>樋沢区</option>
-      <option>東堀区</option>
-      <option>間下区</option>
-      <option>横川区</option>
-    </select>
-  </label>
-  <label>ご住所<textarea name="address" rows="2" autocomplete="street-address"></textarea></label>
-  <label>ご意見・ご関心事項<textarea name="msg" rows="3" placeholder="子育て支援、産業、環境、観光など"></textarea></label>
-  <button class="btn" type="submit">入会を申し込む（デモ送信）</button>
-  <div class="help">※送信先・個人情報の取扱いは必ずプライバシーポリシーに明記してください。</div>
-</form>
+        <h3>
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2l3 6 6 .9-4.5 4.3 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8z" fill="currentColor"/>
+          </svg>
+          会員募集・入会申込フォーム
+        </h3>
+        <p>
+          後援会の趣旨にご賛同いただける方を広く募集しております。<strong>会費はありません。</strong>ご支援は任意です。<br>
+          入会申込はGoogleフォームで受け付けています。下記ボタンから申込ページへお進みください。
+        </p>
+        <a href="https://forms.gle/gYReiNTg8x1fdohm6" target="_blank" rel="noopener" class="btn" style="margin-top:12px;">
+          Googleフォームで申し込む
+        </a>
+        <div class="help">※Googleフォームで個人情報の取扱い・プライバシーポリシーをご確認ください。<br>
+        ※会費は徴収していません。ご支援は任意です。政治資金規正法の範囲でご対応ください。</div>
       </div>
     </div>
   </section>
